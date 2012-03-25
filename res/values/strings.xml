@@ -4,7 +4,7 @@
     <string name="notification_action_text">Click to configure&#8230;</string>
     <string name="notification_text">Volume Miser has started</string>
 	<string name="give_me_some_credit">by Brett Duncavage [<a href="http://twitter.com/xforward">@xforward</a>]</string>
-	<string name="footer_info">Fork this app on github</string>
+	<string name="footer_info">Fork this app on <a href="https://github.com/bduncavage/volumemiser">github</a></string>
 	<string name="speaker_volume">Speaker Volume</string>
 	<string name="headset_volume">Headset Volume</string>
 	<string name="enabled">Enabled</string>
