@@ -59,7 +59,7 @@ public class PreferenceHelper {
 	}
 	
 	public static void saveCurrentVolumeAsSpeakerPref(Context context) {
-		saveCurrentVolumeToPreference(context, HEADSET_VOL_PREF_KEY);
+		saveCurrentVolumeToPreference(context, SPEAKER_VOL_PREF_KEY);
 	}
 	
 	private static void saveCurrentVolumeToPreference(Context context, String pref_key) {

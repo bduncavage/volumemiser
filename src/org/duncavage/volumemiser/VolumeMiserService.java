@@ -3,6 +3,7 @@ package org.duncavage.volumemiser;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.ContentObserver;
@@ -37,6 +38,7 @@ public class VolumeMiserService extends Service {
 	
 	@Override
 	public void onCreate() {
+		audio_manager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
 		getContentResolver().registerContentObserver(System.getUriFor(System.VOLUME_SETTINGS[AudioManager.STREAM_MUSIC]), false,
                 volume_observer);
 		

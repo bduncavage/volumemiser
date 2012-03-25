@@ -17,11 +17,11 @@ public class VolumeMiserReceiver extends BroadcastReceiver {
 			
 			if(connected == 0) {
 				audio_manager.setStreamVolume(AudioManager.STREAM_MUSIC, 
-						PreferenceHelper.getHeadsetVolume(context), 
+						PreferenceHelper.getSpeakerVolume(context), 
 						AudioManager.FLAG_SHOW_UI);
 			} else {
 				audio_manager.setStreamVolume(AudioManager.STREAM_MUSIC, 
-						PreferenceHelper.getSpeakerVolume(context), 
+						PreferenceHelper.getHeadsetVolume(context), 
 						AudioManager.FLAG_SHOW_UI);
 			}
 		}
