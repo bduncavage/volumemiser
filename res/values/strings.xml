@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Volume Miser</string>
+    <string name="notification_action_text">Click to configure&#8230;</string>
+    <string name="notification_text">Volume Miser has started</string>
+	<string name="give_me_some_credit">by Brett Duncavage [<a href="http://twitter.com/xforward">@xforward</a>]</string>
+	<string name="footer_info">Fork this app on github</string>
+	<string name="speaker_volume">Speaker Volume</string>
+	<string name="headset_volume">Headset Volume</string>
+	<string name="enabled">Enabled</string>
+	<string name="start_on_boot">Start when device turns on</string>
+</resources>

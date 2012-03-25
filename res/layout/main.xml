@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/item_separator" />
+    
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speaker_volume"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/speaker_volume_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp" />
+
+    <include layout="@layout/item_separator" />
+    
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/headset_volume"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/headset_volume_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="8dp"  />
+    
+    <include layout="@layout/item_separator" />
+
+    <CheckedTextView
+        android:id="@+id/enabled"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/enabled"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:background="@android:drawable/list_selector_background" />
+
+    <include layout="@layout/item_separator" />
+
+    <CheckedTextView
+        android:id="@+id/start_on_boot"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/start_on_boot"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:background="@android:drawable/list_selector_background" />
+    
+    <include layout="@layout/item_separator" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="10dp" >
+        
+        <ImageView
+	        android:id="@+id/app_icon"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_marginRight="5dp"
+	        android:src="@drawable/ic_launcher"
+	        android:contentDescription="@string/app_name" />
+        
+        <TextView
+            android:id="@+id/my_credit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="@string/give_me_some_credit"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:layout_toRightOf="@id/app_icon" />
+       	
+        <TextView
+	        android:id="@+id/footer"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/my_credit"
+	        android:layout_toRightOf="@id/app_icon"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/footer_info" />
+    </RelativeLayout>
+    
+</LinearLayout>
+
+</ScrollView>
