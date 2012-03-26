@@ -98,6 +98,10 @@ public class PreferenceHelper {
 			editor.putBoolean(CURRENTLY_ENABLED_PREF_KEY, true);
 			editor.putBoolean(START_ON_BOOT_PREF_KEY, true);
 			editor.commit();
+			// call these after the commit, otherwise 2 editors will be open and that
+			// causes bad things to happen
+			saveCurrentVolumeAsHeadsetPref(context);
+			saveCurrentVolumeAsSpeakerPref(context);
 		}
 	}
 }
