@@ -26,6 +26,8 @@ public class VolumeMiserActivity extends Activity {
         
         audio_manager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
 
+        PreferenceHelper.doFirstRunSetup(this);
+        
         if(PreferenceHelper.isEnabled(this)) {
         	startService(new Intent(this, VolumeMiserService.class));
         }

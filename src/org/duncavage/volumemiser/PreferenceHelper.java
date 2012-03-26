@@ -11,6 +11,7 @@ public class PreferenceHelper {
 	public static final String SPEAKER_VOL_PREF_KEY = "org.duncavage.volumemiser.speakervolume";
 	public static final String START_ON_BOOT_PREF_KEY = "org.duncavage.volumemiser.startonboot";
 	public static final String CURRENTLY_ENABLED_PREF_KEY = "org.duncavage.volumemiser.enabled";
+	public static final String COMPLETED_FIRST_RUN_PREF_KEY= "org.duncavage.volumemiser.firstrun";
 	
 	public static int getHeadsetVolume(Context context) {
 		SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_NAME, 0);
@@ -85,5 +86,18 @@ public class PreferenceHelper {
 	
 	public static void setSpeakerVolumePref(Context context, int value) {
 		setVolumePref(context, SPEAKER_VOL_PREF_KEY, value);
+	}
+	
+	public static void doFirstRunSetup(Context context) {
+		// if this is first run, set the first run flag and 
+		// default values.
+		SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_NAME, 0);
+		if(!preferences.getBoolean(COMPLETED_FIRST_RUN_PREF_KEY, false)) {
+			SharedPreferences.Editor editor = preferences.edit();
+			editor.putBoolean(COMPLETED_FIRST_RUN_PREF_KEY, true);
+			editor.putBoolean(CURRENTLY_ENABLED_PREF_KEY, true);
+			editor.putBoolean(START_ON_BOOT_PREF_KEY, true);
+			editor.commit();
+		}
 	}
 }
